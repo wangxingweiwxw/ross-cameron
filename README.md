@@ -2,6 +2,32 @@
 
 打开 `index.html` 即可使用（`frames/` 和 `audio/` 目录需放在它旁边）。页面是静态 HTML，CSS、JavaScript、摘要和字幕都内嵌在页面里，截图放在 `frames/`，中文配音放在 `audio/`，不需要 API 密钥或网络字体，离线也能用。部署时服务器要支持 HTTP Range 请求（nginx、Caddy、GitHub Pages、Cloudflare Pages 等都默认支持），否则配音不能拖动进度；Python 自带的 `http.server` 不支持。
 
+## Cloudflare 部署
+
+本项目是纯静态站点，无需服务器或 API 密钥。部署产物统一放在 `dist/`，只包含 `index.html`、`frames/`、`audio/` 和 `.nojekyll`。
+
+### Workers（当前 GitHub 自动部署）
+
+- 仓库：`wangxingweiwxw/ross-cameron`，生产分支：`main`。
+- 根目录：仓库根目录；Worker 名称：`ross-cameron`。
+- 构建命令可以留空；部署命令：`npx wrangler deploy`（或 `npm run deploy`）。
+- `wrangler.jsonc` 会在部署时执行 `node scripts/build.mjs`，然后只上传 `dist/`。
+
+本地验证：`npm ci`，然后运行 `npx wrangler deploy --dry-run`。本地预览：`npm run dev`。
+
+### Pages（如果选择独立的 Pages 项目）
+
+- 框架预设：`None`。
+- 构建命令：`npm run build`。
+- 构建输出目录：`dist`。
+- 根目录：仓库根目录；生产分支：`main`。
+
+Pages 的 Git 集成负责发布构建输出，不需要填写 `wrangler deploy`。仓库根目录的 `wrangler.jsonc` 是 Workers 配置，不要将它直接用作 Pages 的 Wrangler 配置。
+
+不要把仓库根目录 `.` 设为静态资源上传目录：它会把 `.git` 历史、工具及依赖一并纳入上传。Cloudflare 单个静态资源最大为 25 MiB；构建脚本会在上传前检查大小，超限时报告实际资源路径。无需删除 Git 历史或拆分现有音频。
+
+参考：[Workers 静态资源配置](https://developers.cloudflare.com/workers/static-assets/binding/)、[Wrangler 自定义构建](https://developers.cloudflare.com/workers/wrangler/custom-builds/)、[Pages 静态 HTML 部署](https://developers.cloudflare.com/pages/framework-guides/deploy-anything/)。
+
 ## 内容
 
 - **盈亏日历**：2026-08-24 至 09-29 的日历，每格是他在当期视频中自报的当日盈亏。主账户和小账户挑战分开标注。点格子打开当期复盘。
