@@ -1,0 +1,279 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Ross Cameron 盘后复盘档案</title>
+<meta name="description" content="美国小盘股动能日内交易员 Ross Cameron 的 30 期盘后复盘与 48 条心得短片：依据字幕转写整理的中文摘要、要点与章节，可对照字幕全文和视频截图；附盈亏日历、策略词典、生平与 2017—2025 会计师报告交易账本。">
+<meta name="color-scheme" content="dark">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230e1114'/%3E%3Cpath d='M6 22 12 15l5 4 9-10' stroke='%23f2a93b' stroke-width='3' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<style>
+:root{--bg:#0e1114;--bg2:#12161b;--panel:#161b21;--panel2:#1c222a;--line:#262d36;--line2:#343c47;--text:#e8eaed;--dim:#b3bac5;--mute:#838c99;--amber:#f2a93b;--amber2:#ffcf7d;--green:#3ddc97;--red:#ff7a6b;--cyan:#6cc8f5;--violet:#b9a2ff;--olive:#e0c46c;
+--sans:"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans CJK SC","Source Han Sans SC",system-ui,-apple-system,"Segoe UI",sans-serif;--mono:"JetBrains Mono","SFMono-Regular",Menlo,Consolas,monospace;--r:10px}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:74px;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--text);font:16px/1.75 var(--sans)}
+a{color:var(--cyan);text-underline-offset:3px}a:hover{color:var(--amber2)}
+button,input,select{font:inherit;color:inherit}button{cursor:pointer}:focus-visible{outline:2px solid var(--amber);outline-offset:3px}
+img{max-width:100%}.skip{position:absolute;left:-999px;top:0;background:var(--amber);color:#000;padding:8px 12px;z-index:99}.skip:focus{left:8px}
+.mono{font-family:var(--mono)}.up{color:var(--green)}.dn{color:var(--red)}.flat{color:var(--mute)}
+/* ---------- shell ---------- */
+.shell{display:grid;grid-template-columns:236px minmax(0,1fr)}
+.rail{position:sticky;top:0;height:100vh;overflow:auto;background:var(--bg2);border-right:1px solid var(--line);padding:24px 18px 20px;display:flex;flex-direction:column;gap:26px;scrollbar-width:thin}
+.logo{display:flex;align-items:center;gap:11px;color:var(--text);text-decoration:none}.logo svg{flex:none}.logo b{display:block;font-size:15px;line-height:1.3}.logo small{display:block;font:11px/1.4 var(--mono);color:var(--mute);letter-spacing:.08em}
+.rail nav{display:flex;flex-direction:column;gap:2px}.rail nav a{display:flex;justify-content:space-between;align-items:center;gap:10px;color:var(--dim);text-decoration:none;padding:8px 10px;border-radius:7px;font-size:14.5px}.rail nav a i{font:normal 12px var(--mono);color:var(--mute)}.rail nav a:hover{background:var(--panel)}.rail nav a.on{background:var(--panel2);color:var(--text);box-shadow:inset 3px 0 0 var(--amber)}
+.rail .navlabel{font:11px var(--mono);letter-spacing:.14em;color:var(--mute);margin:0 10px 6px}
+.railnote{margin-top:auto;font-size:12px;line-height:1.7;color:var(--mute);border-top:1px solid var(--line);padding-top:14px}.railnote b{color:var(--dim);font-weight:600}
+.main{min-width:0;padding:0 clamp(18px,3.4vw,52px) 40px;max-width:1280px}
+/* ---------- masthead ---------- */
+.mast{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:44px;padding:52px 0 30px;align-items:end}
+.kick{font:12px var(--mono);letter-spacing:.16em;color:var(--amber);margin:0 0 16px}
+.mast h1{margin:0 0 18px;font-size:clamp(40px,6.2vw,80px);line-height:1.02;letter-spacing:-.025em;font-weight:800}.mast h1 span{display:block;color:var(--amber)}
+.lede{margin:0;max-width:720px;color:var(--dim);font-size:17px;line-height:1.85}.lede b{color:var(--text);font-weight:600}
+.tape{background:var(--panel);border:1px solid var(--line);border-radius:var(--r);padding:14px 16px 8px}.tape h2{margin:0 0 8px;font:12px var(--mono);letter-spacing:.12em;color:var(--mute);font-weight:400}
+.tape button{width:100%;display:grid;grid-template-columns:52px minmax(0,1fr) auto;gap:10px;align-items:baseline;background:none;border:0;border-top:1px dashed var(--line);padding:9px 0;text-align:left}.tape button:first-of-type{border-top:0}.tape button:hover span{color:var(--text)}
+.tape .d{font:12px var(--mono);color:var(--mute)}.tape span{font-size:13.5px;color:var(--dim);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.tape .v{font:600 13px var(--mono)}
+.strip{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));border:1px solid var(--line);border-radius:var(--r);background:var(--panel);margin-bottom:16px}
+.strip div{padding:16px 18px;border-left:1px solid var(--line)}.strip div:first-child{border-left:0}.strip b{display:block;font:600 clamp(20px,2.2vw,28px)/1.3 var(--mono);letter-spacing:-.02em}.strip small{font-size:12.5px;color:var(--mute)}
+.warn{display:flex;gap:14px;align-items:flex-start;background:#2a2112;border:1px solid #4a3a1c;border-radius:var(--r);padding:13px 16px;font-size:14px;color:#e9d9b8;margin-bottom:8px}.warn b{color:var(--amber2)}.warn a{white-space:nowrap}
+/* ---------- sections ---------- */
+section.block{padding-top:58px}
+.shead{display:flex;align-items:flex-end;justify-content:space-between;gap:18px;flex-wrap:wrap;border-bottom:1px solid var(--line);padding-bottom:14px;margin-bottom:20px}
+.shead h2{margin:0;font-size:clamp(24px,2.6vw,32px);letter-spacing:-.01em;line-height:1.25}.shead h2 small{display:block;font:12px var(--mono);letter-spacing:.14em;color:var(--amber);margin-bottom:6px;font-weight:400}
+.shead p{margin:0;max-width:560px;font-size:14px;color:var(--mute)}
+/* calendar */
+.calsum{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:14px}.calsum span{background:var(--panel);border:1px solid var(--line);border-radius:999px;padding:4px 12px;font-size:13px;color:var(--dim)}.calsum b{font-family:var(--mono);font-weight:600}
+.cal{display:grid;grid-template-columns:repeat(5,minmax(0,1fr)) minmax(0,.8fr);gap:6px}
+.cal .hd{font:11px var(--mono);color:var(--mute);letter-spacing:.1em;padding:0 4px 2px}
+.cc{position:relative;min-height:82px;border-radius:8px;background:var(--panel);border:1px solid var(--line);padding:8px 10px;text-align:left;display:flex;flex-direction:column;justify-content:space-between;overflow:hidden}
+.cc .dt{font:11px var(--mono);color:var(--mute)}.cc .amt{font:600 15px var(--mono);letter-spacing:-.02em;white-space:nowrap}.cc .amt .k{display:none}.cc .tag{font-size:11px;color:var(--mute);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+button.cc:hover{border-color:var(--amber)}.cc.empty{background:transparent;border-style:dashed}.cc.off .tag{color:#6d7580}
+.cc.g{background:linear-gradient(0deg,rgba(61,220,151,var(--a)),rgba(61,220,151,var(--a))),var(--panel)}.cc.r{background:linear-gradient(0deg,rgba(255,122,107,var(--a)),rgba(255,122,107,var(--a))),var(--panel)}
+.cc .n2{position:absolute;right:8px;top:7px;font:10px var(--mono);color:var(--amber)}
+.calnote{font-size:12.5px;color:var(--mute);margin:12px 0 0}
+/* toolbar */
+.toolbar{position:sticky;top:0;z-index:20;display:flex;flex-wrap:wrap;gap:10px;align-items:center;background:rgba(14,17,20,.94);backdrop-filter:blur(8px);padding:10px 0;margin-bottom:14px;border-bottom:1px solid var(--line)}
+.seg::-webkit-scrollbar{display:none}.seg{max-width:100%;overflow-x:auto;scrollbar-width:none;display:flex;background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:3px}.seg button{border:0;background:none;padding:5px 12px;border-radius:6px;font-size:13.5px;color:var(--dim);white-space:nowrap}.seg button[aria-pressed=true]{background:var(--amber);color:#1a1206;font-weight:600}
+.search{flex:1 1 240px;display:flex;align-items:center;gap:8px;background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:0 10px}.search input{flex:1;min-width:0;background:none;border:0;padding:8px 0;font-size:14px;outline:none}.search svg{flex:none;color:var(--mute)}
+.count{font:12px var(--mono);color:var(--mute);white-space:nowrap}
+.pill{display:none;align-items:center;gap:6px;background:#2a2112;border:1px solid #4a3a1c;color:var(--amber2);border-radius:999px;padding:3px 6px 3px 12px;font-size:13px}.pill.on{display:flex}.pill button{border:0;background:none;color:var(--amber2);font-size:16px;line-height:1;padding:0 4px}
+/* recap cards */
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(292px,1fr));gap:18px}
+.card{text-decoration:none;color:inherit;display:flex;flex-direction:column;background:var(--panel);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;text-align:left;padding:0;transition:border-color .15s,transform .15s}.card:hover{border-color:var(--amber);transform:translateY(-2px)}
+.card .pic{position:relative;aspect-ratio:16/9;background:#0a0c0e}.card .pic img{width:100%;height:100%;object-fit:cover;display:block}
+.chip{position:absolute;right:10px;top:10px;font:600 12.5px var(--mono);padding:3px 9px;border-radius:6px;background:rgba(10,12,14,.86);border:1px solid var(--line2)}
+.card .kind{position:absolute;left:10px;top:10px;font-size:11.5px;padding:2px 8px;border-radius:6px;background:rgba(10,12,14,.86);color:var(--dim);border:1px solid var(--line2)}
+.card .body{padding:14px 16px 16px;display:flex;flex-direction:column;gap:8px;flex:1}
+.card .when{font:12px var(--mono);color:var(--mute)}.card h3{margin:0;font-size:17px;line-height:1.5}.card p{margin:0;font-size:14px;line-height:1.75;color:var(--dim);display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.tks{display:flex;flex-wrap:wrap;gap:5px;margin-top:auto;padding-top:4px}.tks span{font:11.5px var(--mono);color:var(--green);background:#12241c;border-radius:5px;padding:1px 6px}
+.hit{font-size:12.5px;color:var(--amber2)}
+.empty-note{grid-column:1/-1;text-align:center;color:var(--mute);padding:40px 0}
+/* shorts */
+.scards{display:grid;grid-template-columns:repeat(auto-fill,minmax(168px,1fr));gap:14px}
+.scard{text-decoration:none;color:inherit;display:block;position:relative;border:1px solid var(--line);border-radius:var(--r);overflow:hidden;background:#0a0c0e;padding:0;text-align:left;aspect-ratio:9/15;transition:border-color .15s,transform .15s}.scard:hover{border-color:var(--amber);transform:translateY(-2px)}
+.scard img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.78}
+.scard .cap{position:absolute;left:0;right:0;bottom:0;padding:40px 11px 11px;background:linear-gradient(180deg,transparent,rgba(8,10,12,.94) 45%)}
+.scard .cap small{display:block;font:11px var(--mono);color:var(--amber2);margin-bottom:3px}.scard .cap b{display:block;font-size:14px;line-height:1.45;font-weight:600}
+/* glossary */
+.gloss{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.gcol{background:var(--panel);border:1px solid var(--line);border-radius:var(--r);padding:14px 14px 8px}.gcol h3{margin:0 0 6px;font:12px var(--mono);letter-spacing:.14em;color:var(--mute);font-weight:400}
+.gcol button{display:flex;justify-content:space-between;align-items:baseline;gap:8px;width:100%;text-align:left;background:none;border:0;border-top:1px solid var(--line);padding:9px 2px}.gcol button:first-of-type{border-top:0}.gcol button:hover b{color:var(--amber2)}
+.gcol b{font-size:14.5px;font-weight:600}.gcol b small{display:block;font:11.5px var(--mono);color:var(--mute);font-weight:400}.gcol i{font:normal 11.5px var(--mono);color:var(--mute);white-space:nowrap}
+.tickers{display:flex;flex-wrap:wrap;gap:6px;margin-top:16px}.tickers button{font:12.5px var(--mono);color:var(--green);background:#12241c;border:1px solid #1d3a2c;border-radius:6px;padding:3px 9px}.tickers button:hover{border-color:var(--green)}.tickers button i{font-style:normal;color:var(--mute);margin-left:5px}
+/* bio */
+.bio{display:grid;grid-template-columns:minmax(0,1fr) 330px;gap:28px;align-items:start}
+.tl{list-style:none;margin:0;padding:0}.tl li{display:grid;grid-template-columns:118px minmax(0,1fr);gap:18px;padding:14px 0;border-top:1px solid var(--line)}.tl li:first-child{border-top:0}
+.tl .when{font:600 13px var(--mono);color:var(--amber)}.tl li.warn2 .when{color:var(--red)}.tl b{display:block;font-size:16px;margin-bottom:2px}.tl p{margin:0;font-size:14.5px;color:var(--dim);line-height:1.85}.tl .s{font-size:12px;color:var(--mute)}
+.profile{background:var(--panel);border:1px solid var(--line);border-radius:var(--r);padding:18px 20px}.profile h3{margin:0 0 8px;font-size:15px}
+.fact{display:flex;justify-content:space-between;gap:14px;border-top:1px solid var(--line);padding:8px 0;font-size:13.5px}.fact span{color:var(--mute);white-space:nowrap}.fact b{font-weight:500;text-align:right}
+.profile blockquote{margin:14px 0 0;padding:12px 14px;background:var(--panel2);border-radius:8px;font-size:14px;line-height:1.8}.profile blockquote small{display:block;color:var(--mute);margin-top:6px;font-size:12px}
+/* term highlight */
+.t{border:0;background:none;padding:0;font:inherit;font-weight:600;cursor:pointer;color:inherit;text-decoration:underline dotted;text-underline-offset:4px;text-decoration-thickness:1.5px}.t.tk{color:var(--green);font-family:var(--mono);font-size:.94em}.t.c-select{text-decoration-color:var(--green)}.t.c-setup{text-decoration-color:var(--violet)}.t.c-risk{text-decoration-color:var(--olive)}.t.c-market{text-decoration-color:var(--cyan)}.t:hover{color:var(--amber2)}
+/* ---------- viewer ---------- */
+.viewer{position:fixed;inset:0;z-index:60;background:rgba(4,6,8,.78);backdrop-filter:blur(5px);display:none;align-items:center;justify-content:center;padding:2.5vh 2.5vw}.viewer.on{display:flex}
+.vbox{width:min(1320px,100%);height:min(95vh,1000px);background:var(--bg);border:1px solid var(--line2);border-radius:14px;display:grid;grid-template-rows:auto minmax(0,1fr);overflow:hidden;box-shadow:0 30px 80px rgba(0,0,0,.55)}
+.vhead{display:flex;gap:16px;align-items:flex-start;justify-content:space-between;padding:16px 20px 14px;border-bottom:1px solid var(--line);background:var(--bg2)}
+.vmeta{font:12px var(--mono);color:var(--mute);display:flex;flex-wrap:wrap;gap:6px 14px;align-items:center}.vmeta .v{font-weight:600;font-size:13px}
+.vhead h2{margin:4px 0 0;font-size:clamp(18px,2vw,24px);line-height:1.4}.vhead h2 small{display:block;font:13px var(--sans);color:var(--mute);font-weight:400;margin-top:2px}
+.vbtns{display:flex;gap:6px;flex:none}.vbtns button{width:36px;height:36px;border-radius:8px;border:1px solid var(--line2);background:var(--panel);font-size:17px;line-height:1;color:var(--dim)}.vbtns button:hover{border-color:var(--amber);color:var(--text)}
+.vbody{display:grid;grid-template-columns:minmax(0,1.08fr) minmax(0,1fr);min-height:0}
+.vleft{border-right:1px solid var(--line);padding:18px 20px;overflow:auto;display:flex;flex-direction:column;gap:12px;scrollbar-width:thin}
+.stage{flex:none;background:#050607;border-radius:10px;overflow:hidden;display:grid;place-items:center;aspect-ratio:16/9}.stage.tall{aspect-ratio:auto;height:min(58vh,560px)}.stage{position:relative}.stage img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;display:block}
+.thumbs{flex:none;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}.thumbs.two{grid-template-columns:repeat(6,minmax(0,1fr))}
+.thumbs button{padding:0;border:2px solid transparent;border-radius:8px;background:#050607;overflow:hidden;position:relative;aspect-ratio:16/9}.thumbs.two button{aspect-ratio:9/12}.thumbs img{width:100%;height:100%;object-fit:cover;display:block;opacity:.72}.thumbs button[aria-pressed=true]{border-color:var(--amber)}.thumbs button[aria-pressed=true] img,.thumbs button:hover img{opacity:1}
+.thumbs span{position:absolute;left:0;right:0;bottom:0;font:11px var(--mono);background:rgba(5,6,7,.8);padding:2px 5px;color:var(--dim)}
+.fcap{flex:none;background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:12px 14px}.fcap .row{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:6px}.fcap .row b{font:600 12.5px var(--mono);color:var(--amber2)}
+.fcap p{margin:0;font-size:14px;line-height:1.75;color:var(--dim)}.fcap p.en{margin-top:6px;font-size:13px;color:var(--mute)}.fcap .note{font-size:12px;color:var(--mute);margin-top:8px}
+.ghost{border:1px solid var(--line2);background:none;border-radius:7px;padding:3px 10px;font-size:12.5px;color:var(--dim)}.ghost:hover{border-color:var(--amber);color:var(--text)}
+.vright{display:grid;grid-template-rows:auto auto minmax(0,1fr);min-height:0}
+.player{display:flex;align-items:center;gap:10px;padding:10px 20px;border-bottom:1px solid var(--line);background:var(--bg2)}.player[hidden]{display:none}.pl-main{flex:none;display:flex;align-items:center;gap:7px;border:0;border-radius:999px;background:var(--amber);color:#1a1206;font-weight:600;font-size:13.5px;padding:6px 14px 6px 11px}.pl-main:hover{background:var(--amber2)}.pl-main svg{flex:none}.pl-mid{flex:1;min-width:0;display:flex;flex-direction:column;gap:1px}.pl-mid input{width:100%;margin:0;accent-color:var(--amber);height:16px}.pl-info{display:flex;justify-content:space-between;gap:8px;font:11.5px var(--mono);color:var(--mute);white-space:nowrap}.pl-info span:first-child{overflow:hidden;text-overflow:ellipsis}.player select{flex:none;background:var(--panel);border:1px solid var(--line2);border-radius:7px;padding:3px 4px;font:12px var(--mono);color:var(--dim)}.pl-chk{flex:none;display:flex;align-items:center;gap:4px;font-size:12.5px;color:var(--dim);cursor:pointer}.pl-chk input{accent-color:var(--amber);margin:0}.playall{display:flex;align-items:center;gap:6px;border:1px solid #4a3a1c;background:#2a2112;color:var(--amber2);border-radius:8px;padding:6px 12px;font-size:13.5px;white-space:nowrap}.playall:hover{border-color:var(--amber);color:var(--text)}
+.tabs{display:flex;gap:4px;padding:10px 20px 0;border-bottom:1px solid var(--line)}.tabs button{border:0;background:none;padding:9px 12px;font-size:14px;color:var(--mute);border-bottom:2px solid transparent;margin-bottom:-1px}.tabs button[aria-selected=true]{color:var(--text);border-bottom-color:var(--amber);font-weight:600}.tabs button i{font:normal 11px var(--mono);color:var(--mute);margin-left:4px}
+.pane{overflow:auto;padding:18px 22px 28px;scrollbar-width:thin}.pane[hidden]{display:none}
+.pane h4{margin:22px 0 8px;font:12px var(--mono);letter-spacing:.14em;color:var(--mute);font-weight:400}.pane h4:first-child{margin-top:0}
+.lead{font-size:15.5px;line-height:1.95;margin:0}
+.pts{margin:0;padding:0;list-style:none;counter-reset:p}.pts li{position:relative;padding:8px 0 8px 30px;border-top:1px solid var(--line);font-size:14.5px;line-height:1.85;color:var(--dim)}.pts li:first-child{border-top:0}.pts li:before{counter-increment:p;content:counter(p,decimal-leading-zero);position:absolute;left:0;top:10px;font:11px var(--mono);color:var(--amber)}
+.chs{display:flex;flex-direction:column;gap:2px}.chs button{display:grid;grid-template-columns:62px minmax(0,1fr) auto;gap:10px;align-items:baseline;text-align:left;background:none;border:0;border-radius:7px;padding:7px 8px;font-size:14.5px}.chs button:hover{background:var(--panel)}.chs .ts{font:12.5px var(--mono);color:var(--amber2)}.chs i{font:normal 12px var(--sans);color:var(--mute)}
+.bi2{display:grid;gap:10px}.bi2 div{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:12px 14px;font-size:14.5px;line-height:1.85;white-space:pre-line}.bi2 small{display:block;font:11px var(--mono);color:var(--mute);letter-spacing:.1em;margin-bottom:4px}
+.txbar{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:10px}.txbar .search{flex:1 1 180px}.txbar .seg button{padding:4px 10px;font-size:13px}
+.para p{margin:0}.para .zh{color:var(--text);line-height:1.9}.m-both .para .en{margin-top:5px;font-size:13.5px;line-height:1.75;color:var(--mute)}.m-both .para.cur .en{color:var(--dim)}
+.para{display:grid;grid-template-columns:54px minmax(0,1fr);gap:10px;padding:8px 8px;border-radius:7px;font-size:14.5px;line-height:1.85;color:var(--dim)}.para .pt{display:flex;flex-direction:column;align-items:flex-start;gap:2px}.para .pt button{border:0;background:none;padding:0;font:12px/2.1 var(--mono);color:var(--mute);text-align:left}.para .pt button:hover{color:var(--amber2)}.para .pt .pp{font:11.5px/1.6 var(--sans);opacity:0}.para:hover .pp,.para .pp:focus-visible,.para.say .pp{opacity:1}@media(hover:none){.para .pt .pp{opacity:1}}
+.para.cur{background:#211a0e;color:var(--text)}.para.cur .pt button{color:var(--amber2)}.para.say{background:#211a0e;color:var(--text);box-shadow:inset 3px 0 var(--amber)}.para.say .pt button{color:var(--amber2)}.para mark{background:#5b4312;color:#fff;border-radius:3px;padding:0 1px}
+.srcnote{font-size:12px;color:var(--mute);margin-top:18px;border-top:1px solid var(--line);padding-top:10px}
+/* term panel */
+.term{position:fixed;right:16px;top:16px;bottom:16px;width:380px;z-index:70;background:var(--bg2);border:1px solid var(--line2);border-radius:12px;box-shadow:0 20px 60px rgba(0,0,0,.5);padding:20px 22px;overflow:auto;display:none}.term.on{display:block}
+.term .x{position:absolute;right:12px;top:10px;border:0;background:none;font-size:22px;color:var(--mute)}.term .k{font:11px var(--mono);letter-spacing:.14em;color:var(--amber)}.term h3{margin:6px 0 0;font-size:22px}.term h3 small{font:13px var(--mono);color:var(--mute);margin-left:8px;font-weight:400}
+.term p{font-size:14.5px;line-height:1.9;color:var(--dim)}.term .src{font-size:12px;color:var(--mute);border-top:1px solid var(--line);padding-top:10px}.term .src a{color:var(--mute)}
+.term ul{list-style:none;margin:8px 0 0;padding:0}.term li button{display:block;width:100%;text-align:left;background:none;border:0;border-top:1px solid var(--line);padding:8px 0;font-size:13.5px;color:var(--dim)}.term li button:hover{color:var(--text)}.term li small{font:11.5px var(--mono);color:var(--mute);margin-right:8px}
+/* ---------- ledger (markup from the audited-report page) ---------- */
+.ledger-top .stats{display:grid;grid-template-columns:1fr 1.5fr 1fr 1fr;border:1px solid var(--line);border-radius:var(--r);background:var(--panel);overflow:hidden}
+.stat{padding:18px 20px;border-left:1px solid var(--line)}.stat:first-child{border-left:0}.stat .label{font-size:13px;color:var(--mute)}.stat strong{display:block;font:600 clamp(20px,2.3vw,30px)/1.5 var(--mono);letter-spacing:-.02em}.stat small{font-size:12px;color:var(--mute)}.stat.featured{background:#111d33}.stat.featured strong{color:#7fb0ff}
+.reading{margin:14px 0 0;padding:12px 16px;border-radius:8px;background:var(--panel);border-left:3px solid var(--amber);font-size:14px;color:var(--dim)}.reading strong{color:var(--amber2)}.reading a{white-space:nowrap}
+#ledger section{padding-top:40px}
+.section-head{display:flex;align-items:baseline;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:14px}.section-head h2{margin:0;font-size:20px}.section-head h2 span{font:12px var(--mono);color:var(--amber);margin-right:10px;border:1px solid #4a3a1c;border-radius:5px;padding:1px 6px;vertical-align:3px}.section-head>a,.section-head>span{font-size:13px}
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:var(--r)}.micro{font-size:12px;color:var(--mute)}
+.chart-grid{display:grid;grid-template-columns:minmax(0,1.7fr) minmax(280px,1fr);overflow:hidden}.chart-main{padding:20px 22px;border-right:1px solid var(--line)}.panel-top{display:flex;justify-content:space-between;gap:14px;align-items:center}.panel-top h3{margin:0;font-size:15px}
+.chart{display:grid;grid-template-columns:repeat(9,minmax(0,1fr));height:250px;gap:8px;align-items:end;padding-top:22px;border-bottom:1px solid var(--line2);background:repeating-linear-gradient(to top,transparent 0,transparent 61px,var(--line) 62px,var(--line) 63px)}
+.bar-button{background:none;border:0;padding:0;height:100%;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;min-width:0}.bar-button .value{font:11.5px var(--mono);color:var(--mute);margin-bottom:5px;white-space:nowrap}
+.bar{display:block;width:66%;min-height:8px;background:#2a3f66;border-radius:4px 4px 0 0;transition:background .2s}.bar-button:hover .bar{background:#3f63a8}.bar-button[aria-pressed=true] .bar{background:#4f8cff}.bar-year{font:11.5px var(--mono);color:var(--mute);padding:8px 0 4px}.bar-button[aria-pressed=true] .bar-year{color:#7fb0ff;font-weight:700}
+.chart-caption{font-size:13px;color:var(--mute);margin:14px 0 0}.chart-caption b{color:var(--dim)}
+.spotlight{padding:22px;background:var(--panel2)}.spotlight .yearline{display:flex;justify-content:space-between;align-items:center}.spotlight .year{font:600 32px var(--mono);color:#7fb0ff}.spotlight h3{font:600 28px var(--mono);margin:12px 0 2px;letter-spacing:-.02em}.spotlight p{font-size:14px;line-height:1.85;color:var(--dim);margin:14px 0 0}
+.spotfacts{display:grid;grid-template-columns:1fr 1fr;gap:10px;border-top:1px solid var(--line);margin-top:16px;padding-top:12px}.spotfacts small{display:block;font-size:12px;color:var(--mute)}.spotfacts b{font:15px var(--mono)}
+.table-scroll{overflow:auto;scrollbar-width:thin}table{border-collapse:collapse;width:100%;font-size:14px;white-space:nowrap}caption{color:var(--mute)}th,td{text-align:right;padding:11px 16px;border-bottom:1px solid var(--line)}th{font-size:12px;color:var(--mute);font-weight:500;background:var(--panel2)}th:first-child,td:first-child{text-align:left}td.num{font-family:var(--mono)}tbody tr:last-child td{border-bottom:0}tbody tr:hover{background:#1a2027}
+.warnmark{color:var(--red);font-size:12px;margin-left:4px}.table-note{font-size:13px;color:var(--mute);margin:12px 0}.textlink{border:0;background:none;padding:0;color:var(--cyan);text-decoration:underline;text-underline-offset:3px}
+.heat-head{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;padding:16px 20px;border-bottom:1px solid var(--line)}
+.segmented{display:flex;background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:3px}.segmented button{border:0;background:none;padding:5px 12px;border-radius:6px;font-size:13.5px;color:var(--dim)}.segmented button[aria-pressed=true]{background:var(--amber);color:#1a1206;font-weight:600}
+.heat-wrap{overflow:auto;padding:18px 20px}.heat{min-width:820px;display:grid;grid-template-columns:52px repeat(12,minmax(56px,1fr));gap:4px}.heat .month,.heat .yr{font:11.5px var(--mono);color:var(--mute);display:grid;place-items:center;padding:6px 0}.heat .yr{justify-content:start;font-size:13px;color:var(--dim)}
+#heat .cell{min-height:44px;display:grid;place-items:center;padding:6px 2px;border-radius:5px;border:1px solid transparent;font:11.5px var(--mono);cursor:default;background:var(--panel2)}#heat .cell.negative{background:#3a1a17;color:#ff9d91;border-color:#5a2721}
+.legend{display:flex;flex-wrap:wrap;gap:16px;margin-top:14px;font-size:12px;color:var(--mute)}.legend i{display:inline-block;width:10px;height:10px;border-radius:2px;background:rgba(79,140,255,.6);margin-right:6px}.legend .loss{background:#5a2721}
+.heat-detail{margin-top:12px;border-top:1px solid var(--line);padding-top:12px;font-size:14px;min-height:38px;color:var(--dim)}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:18px}.text-panel{padding:22px}.text-panel h3{margin:0 0 12px;font-size:17px}.text-panel p{font-size:14.5px;line-height:1.9;color:var(--dim);margin:10px 0}
+.kicker{font:11.5px var(--mono);letter-spacing:.1em;color:var(--amber);margin-bottom:8px}.calc{background:var(--bg);border-radius:8px;padding:15px 16px;margin:14px 0;font:14px/1.9 var(--mono);color:var(--dim);overflow-wrap:anywhere}.big-result{display:block;font-size:22px;color:#7fb0ff;margin-top:4px}
+.source{font-size:12px!important;color:var(--mute)!important}.source a{color:var(--mute)}
+.audit-strip{display:grid;grid-template-columns:1fr 1fr;background:var(--panel);border:1px solid var(--line);border-radius:var(--r);margin-bottom:18px}.period{padding:20px 22px}.period+.period{border-left:1px solid var(--line)}.period b{display:block;font:19px var(--mono);margin:4px 0}.period p{margin:0;font-size:14px;color:var(--dim)}.period .kicker{color:var(--mute)}
+.note-list{list-style:none;margin:0;padding:0}.note-list li{padding:12px 0;border-top:1px solid var(--line);font-size:14.5px;color:var(--dim)}.note-list li:first-child{border-top:0}.note-list b{display:block;color:var(--text);margin-bottom:3px}
+.report-pages{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:8px;margin-top:18px}.report-page{display:flex;flex-direction:column;gap:4px;background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:12px 10px;text-decoration:none;color:var(--text);font-size:13px}.report-page:hover{border-color:var(--amber)}.report-page b{font:600 20px var(--mono);color:var(--amber)}.report-page span{font-size:11.5px;color:var(--mute)}
+details{margin-top:18px;background:#1f1614;border:1px solid #4a2a24;border-radius:var(--r);padding:0 20px}summary{cursor:pointer;padding:15px 0;font-weight:600;font-size:14.5px;color:#ffb4a8}details p{font-size:14px;line-height:1.9;color:var(--dim);margin:0 0 14px}
+.community{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}.story{display:flex;flex-direction:column;background:var(--panel);border:1px solid var(--line);border-radius:var(--r);padding:20px}.story .byline{font-size:12px;color:var(--mute)}.story h3{font-size:16.5px;line-height:1.6;margin:10px 0 8px}.story p{font-size:14px;line-height:1.85;color:var(--dim);margin:0 0 12px}.story .verdict{background:var(--panel2);border-radius:7px;padding:10px 12px;font-size:13px}.story a{margin-top:auto;font-size:13px}
+.regulatory{margin-top:16px;background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--red);border-radius:8px;padding:16px 20px;font-size:14px;color:var(--dim)}.regulatory b{color:var(--text)}.regulatory p{margin:6px 0 0}
+.sources{display:grid;grid-template-columns:1fr 1fr;gap:0 30px}.source-item{display:flex;gap:14px;padding:14px 0;border-top:1px solid var(--line)}.source-id{font:12px var(--mono);color:var(--amber);padding-top:3px}.source-item a{font-size:14.5px;text-decoration:none}.source-item p{margin:3px 0 0;font-size:13px;color:var(--mute)}
+footer{margin-top:56px;border-top:1px solid var(--line);padding-top:18px;font-size:12.5px;color:var(--mute);display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}footer p{margin:0;max-width:880px;line-height:1.8}
+noscript{display:block;background:#2a2112;color:var(--amber2);padding:14px 18px;border-radius:8px;margin:16px 0}
+/* ---------- responsive ---------- */
+@media(max-width:1180px){.mast{grid-template-columns:1fr;gap:26px}.tape{max-width:560px}.gloss{grid-template-columns:repeat(2,minmax(0,1fr))}.bio{grid-template-columns:1fr}.community{grid-template-columns:1fr}.report-pages{grid-template-columns:repeat(4,minmax(0,1fr))}}
+@media(max-width:980px){.shell{display:block}.rail{position:sticky;top:0;z-index:40;height:auto;flex-direction:row;align-items:center;gap:14px;padding:9px 16px;border-right:0;border-bottom:1px solid var(--line);overflow:hidden}.logo small,.railnote,.rail .navlabel{display:none}.logo b{font-size:13.5px;white-space:nowrap}
+.rail nav{flex-direction:row;overflow-x:auto;scrollbar-width:none;gap:2px}.rail nav::-webkit-scrollbar{display:none}.rail nav a{padding:6px 10px;white-space:nowrap;font-size:13.5px}.rail nav a i{display:none}.rail nav a.on{box-shadow:inset 0 -2px 0 var(--amber)}
+.toolbar{top:53px}html{scroll-padding-top:120px}.term{left:0;right:0;top:auto;bottom:0;width:auto;max-height:75vh;border-radius:14px 14px 0 0}}
+@media(max-width:860px){.vbox{height:100%;grid-template-rows:auto minmax(0,1fr)}.viewer{padding:0}.vbox{border-radius:0;border:0}.vbody{display:block;overflow:auto}.vleft{border-right:0;border-bottom:1px solid var(--line);overflow:visible}.vright{display:block}.player{position:sticky;top:0;z-index:3;padding:8px 14px;flex-wrap:wrap}.pl-mid{flex-basis:160px}.pane{overflow:visible}.stage.tall{height:48vh}.chart-grid,.two-col,.audit-strip,.sources{grid-template-columns:1fr}.chart-main{border-right:0;border-bottom:1px solid var(--line)}.period+.period{border-left:0;border-top:1px solid var(--line)}}
+@media(max-width:720px){.main{padding:0 16px 32px}.mast{padding-top:30px}.lede{font-size:15.5px}.strip{grid-template-columns:repeat(2,minmax(0,1fr))}.strip div{border-left:0;border-top:1px solid var(--line)}.strip div:nth-child(-n+2){border-top:0}.strip div:nth-child(even){border-left:1px solid var(--line)}.strip div:last-child{grid-column:1/-1;border-left:0}
+.cal{grid-template-columns:repeat(5,minmax(0,1fr));gap:4px}.cal .we,.cal .hd.we{display:none}.cc{min-height:60px;padding:6px}.cc .amt{font-size:12px}.cc .amt .f{display:none}.cc .amt .k{display:inline}.cc .n2{display:none}.cc .tag{display:none}
+.cards{grid-template-columns:1fr}.scards{grid-template-columns:repeat(2,minmax(0,1fr))}.gloss{grid-template-columns:1fr}.tl li{grid-template-columns:1fr;gap:2px}.ledger-top .stats{grid-template-columns:1fr 1fr}.stat{border-left:0;border-top:1px solid var(--line)}.stat:nth-child(-n+2){border-top:0}.stat:nth-child(even){border-left:1px solid var(--line)}.report-pages{grid-template-columns:repeat(2,minmax(0,1fr))}
+.vhead{padding:12px 14px}.vbtns button{width:32px;height:32px}.vleft{padding:14px}.pane{padding:16px 14px 24px}.tabs{padding:6px 10px 0;overflow-x:auto}.thumbs{gap:6px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+@media print{.rail,.toolbar,.viewer,.term{display:none}.shell{display:block}body{background:#fff;color:#000}}
+__SERIESCSS__
+</style></head><body>
+<a class="skip" href="#archive">跳至复盘档案</a>
+<div class="shell">
+<aside class="rail">
+ __SERIES__
+ <a class="logo" href="#top"><svg width="30" height="30" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="#1c222a"/><path d="M6 22 12 15l5 4 9-10" stroke="#f2a93b" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><span><b>Ross Cameron</b><small>盘后复盘档案 · SMALL CAPS</small></span></a>
+ <div><div class="navlabel">目录</div><nav aria-label="页面目录"><a class="m-only" href="../">↖ 系列</a><a href="#calendar">盈亏日历<i>08—09</i></a><a href="#archive">复盘档案<i id="n-rec">30</i></a><a href="#shorts">心得短片<i id="n-sh">48</i></a><a href="#glossary">策略词典<i id="n-terms">31</i></a><a href="#bio">生平<i>2001—</i></a><a href="#ledger">交易账本<i>9 年</i></a><a href="#sources">来源</a></nav></div>
+ <p class="railnote"><b>字幕</b>：TranscriptAPI 转写，2026-09-30 取得<br><b>摘要</b>：本站依据字幕中文整理<br><b>截图</b>：视频约 25% / 50% / 75% 处画面<br>独立整理，非 Warrior Trading 官方网站</p>
+</aside>
+<main class="main" id="top">
+<header class="mast">
+ <div>
+  <p class="kick">DAY-TRADING CASEBOOK · 2026.07—09</p>
+  <h1>Ross Cameron<span>盘后复盘档案</span></h1>
+  <p class="lede">美股小盘动能日内交易员、Warrior Trading 创始人 Ross Cameron 几乎每个交易日收盘后都会录一期复盘。本站取得了他 <b>78 条视频的英文字幕</b>，逐期整理成<b>中文摘要、要点和带时间点的章节</b>。点开任意一期，可以对照字幕全文，并查看视频截图及截图时刻前后他说了什么。</p>
+ </div>
+ <aside class="tape" aria-label="最近几期自报盈亏"><h2>最近几期 · 他自报的当日盈亏</h2><div id="tape"></div></aside>
+</header>
+<div class="strip" aria-label="收录概况"><div><b id="s-rec">30</b><small>期盘后复盘 / 周末清单</small></div><div><b id="s-sh">48</b><small>条心得短片</small></div><div><b>__WORDS__</b><small>词英文字幕（全文可搜）</small></div><div><b id="s-img">216</b><small>张视频截图</small></div><div><b>$18.8M</b><small>2017—2025 会计师报告累计收益</small></div></div>
+<p class="warn"><span aria-hidden="true">⚠</span><span><b>他每条视频都会说：My results are not typical.</b> 日内交易风险很高，大多数交易者会亏钱；高收益不代表可以复制。本站仅供学习参考，不构成投资建议。<a href="#caveats">业绩口径说明 →</a></span></p>
+<noscript>复盘档案、日历和词典需要启用 JavaScript；交易账本的主要结论可以直接阅读。</noscript>
+
+<section class="block" id="calendar"><div class="shead"><h2><small>01 · P&amp;L CALENDAR</small>盈亏日历</h2><p>每格是他在当期视频里<b>自报</b>的主账户当日盈亏；只提到小账户挑战的日子单独标注。点格子打开当期复盘。日期为视频发布日（美东）。</p></div>
+<div class="calsum" id="calsum"></div><div class="cal" id="cal"></div><p class="calnote">金额为视频中口述的数字，本站未核对券商记录；“约”表示他给的是近似值。9 月 7 日为劳动节休市。</p></section>
+
+<section class="block" id="archive"><div class="shead"><h2><small>02 · SESSION RECAPS</small>复盘档案</h2><p>30 期长视频，每期都有中文摘要、要点、章节、字幕全文和 4 张截图。搜索范围包括字幕全文。</p></div>
+<div class="toolbar"><div class="seg" role="group" aria-label="类型"><button type="button" data-k="all" aria-pressed="true">全部</button><button type="button" data-k="recap" aria-pressed="false">每日复盘</button><button type="button" data-k="watch" aria-pressed="false">周末清单</button><button type="button" data-k="green" aria-pressed="false">绿日</button><button type="button" data-k="red" aria-pressed="false">红日</button></div>
+<label class="search"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><input type="search" id="q" placeholder="搜索摘要、字幕或 $代码，如 halt、$GRML、增发" aria-label="搜索复盘"></label>
+<span class="pill" id="pill"><span></span><button type="button" aria-label="清除筛选">×</button></span><span class="count" id="count"></span><button type="button" class="playall" data-playall="rec">▶ 一键连播中文配音</button></div>
+<div class="cards" id="cards" aria-live="polite"></div></section>
+
+<section class="block" id="shorts"><div class="shead"><h2><small>03 · SHORTS</small>心得短片</h2><p>48 条一分钟以内的短片，每条都有依据字幕整理的摘要、视频说明的中文译文和字幕全文。</p></div>
+<div class="toolbar" style="position:static"><div class="seg" role="group" aria-label="主题" id="stopics"></div><span class="count" id="scount"></span><button type="button" class="playall" data-playall="short">▶ 一键连播中文配音</button></div>
+<div class="scards" id="scards"></div></section>
+
+<section class="block" id="glossary"><div class="shead"><h2><small>04 · GLOSSARY</small>策略词典</h2><p>摘要和字幕里带点状下划线的词都可以点开，查看释义、出处，以及出现过这个词的复盘和短片。</p></div>
+<div class="gloss" id="gloss"></div><div class="tickers" id="tickers"></div></section>
+
+<section class="block" id="bio"><div class="shead"><h2><small>05 · BIOGRAPHY</small>生平：从失业到 1,881 万</h2><p>依据官网自述《About Ross Cameron》、会计师报告与 FTC 公告。<a href="https://www.warriortrading.com/ross-cameron/" target="_blank" rel="noopener noreferrer">官网自述 ↗</a></p></div>
+<div class="bio"><ol class="tl" id="timeline"></ol><aside class="profile"><h3>他是谁</h3><div class="fact"><span>身份</span><b>全职日内交易员 · Warrior Trading 创始人</b></div><div class="fact"><span>交易风格</span><b>美股小盘动能股 · 做多为主</b></div><div class="fact"><span>核心时段</span><b>美东 7:00—10:00</b></div><div class="fact"><span>常用券商</span><b>Lightspeed（直连）· 小账户用 Schwab</b></div><div class="fact"><span>著作</span><b>How To Day Trade: The Plain Truth</b></div><div class="fact"><span>居住地</span><b>马萨诸塞州伯克希尔地区</b></div><blockquote>“交易是一门统计学的职业。你要么拥有能带来回报的统计，要么拥有带来亏损的统计。”<small>Trading is a career of statistics. —— 官网《Momentum Day Trading Strategy》</small></blockquote></aside></div></section>
+
+<section class="block" id="ledger"><div class="shead"><h2><small>06 · LEDGER 2017—2025</small>交易账本：会计师报告里的九年</h2><p>整理自 Warrior Trading 官网嵌入的 SingerLewak 会计师报告；收益口径、账户范围和勾稽差额都保留原样。</p></div>
+<div class="ledger-top">__LEDGER_TOP__</div>
+__V1SECTIONS__
+</section>
+<footer><p>Ross Cameron 盘后复盘档案 · <a href="../">神奇交易员系列</a>的一部分 · 独立资料整理，非 Warrior Trading 官方网站，与其无隶属关系。字幕来自 TranscriptAPI 对其公开视频的转写（取得于 2026-09-30），中文摘要和翻译由本站完成，视频与截图版权归原作者所有；业绩数据来自公开会计师报告（核查于 2026-09-28）。不构成投资建议，历史收益不代表可以复制。</p><a href="#top">返回页首 ↑</a></footer>
+</main></div>
+
+<div class="viewer" id="viewer" role="dialog" aria-modal="true" aria-labelledby="v-title"><div class="vbox">
+ <div class="vhead"><div><div class="vmeta" id="v-meta"></div><h2 id="v-title"></h2></div><div class="vbtns"><button type="button" id="v-prev" aria-label="上一期">‹</button><button type="button" id="v-next" aria-label="下一期">›</button><button type="button" id="v-close" aria-label="关闭">×</button></div></div>
+ <div class="vbody"><div class="vleft"><div class="stage" id="v-stage"><img id="v-img" alt=""></div><div class="thumbs" id="v-thumbs"></div><div class="fcap" id="v-cap"></div></div>
+ <div class="vright"><div class="tabs" role="tablist" id="v-tabs"></div><div class="player" id="player" role="group" aria-label="中文配音播放"><button type="button" class="pl-main" id="pl-btn"></button><div class="pl-mid"><input type="range" id="pl-seek" min="0" max="1000" value="0" step="1" aria-label="配音进度"><div class="pl-info"><span id="pl-now"></span><span id="pl-time"></span></div></div><select id="pl-rate" aria-label="语速"><option value="0.8">0.8×</option><option value="1">1×</option><option value="1.25">1.25×</option><option value="1.5">1.5×</option><option value="2">2×</option></select><label class="pl-chk" title="播完自动播放列表里的下一期"><input type="checkbox" id="pl-chain">连播</label><audio id="pl-audio" preload="none"></audio></div><div class="pane" id="p-sum" role="tabpanel"></div><div class="pane" id="p-tx" role="tabpanel" hidden><div class="txbar"><label class="search"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><input type="search" id="tq" placeholder="在本期字幕中查找（中英文均可）" aria-label="在字幕中查找"></label><div class="seg" id="txmode" role="group" aria-label="字幕语言"><button type="button" data-txm="both">中英对照</button><button type="button" data-txm="zh">中文</button><button type="button" data-txm="en">英文</button></div><span class="count" id="tcount"></span></div><div id="tx"></div><p class="srcnote">英文字幕为自动语音识别转写（TranscriptAPI），人名、代码和数字可能有误；中文为本站逐段翻译，口语和识别错误处按上下文意译。时间点可点击。</p></div></div></div>
+</div></div>
+<aside class="term" id="term" role="dialog" aria-modal="false" aria-labelledby="term-title"><button type="button" class="x" id="term-x" aria-label="关闭">×</button><div id="term-body"></div></aside>
+<script>
+__V1JS__
+</script>
+<script>
+const FEED=__FEED__;
+const AU=__AUDIO__;
+const TX=__TX__;
+const TOPICS={risk:'风险管理',select:'选股',setup:'形态与入场',mind:'心态与习惯',market:'市场观察',result:'战报',recap:'每日复盘',watch:'观察清单'};
+const CAT={select:'选股',setup:'形态与指标',risk:'风险与心态',market:'市场与术语'};
+const SRC={wl:['官网《Best Stocks to Day Trade》','https://www.warriortrading.com/day-trading-watch-list-top-stocks-to-watch/'],mom:['官网《Momentum Day Trading Strategy》','https://www.warriortrading.com/momentum-day-trading-strategy/'],gap:['官网《Gap and Go》','https://www.warriortrading.com/gap-go/'],noshort:['官网《Why I Don’t Short Stocks》','https://www.warriortrading.com/why-i-dont-short-stocks-ross-cameron/'],guide:['官网《Day Trading 入门指南》','https://www.warriortrading.com/day-trading/'],bio:['官网《About Ross Cameron》','https://www.warriortrading.com/ross-cameron/'],earn:['官网业绩披露页','https://www.warriortrading.com/ross-camerons-verified-day-trading-earnings/'],tx:['本站复盘档案（字幕转写）','#archive'],site:['本站释义','#glossary']};
+const TERMS=[
+{id:'five-pillars',zh:'选股五要素',en:'5 Pillars of Stock Selection',cat:'select',p:['5 pillars of stock selection','five pillars','选股五要素','五要素'],d:'他筛选日内标的的五条标准：① 当日已上涨至少 10%；② 相对成交量至少 5 倍；③ 有明确的新闻催化；④ 价格 $2—$20（甜区 $5—$10）；⑤ 流通股低于 2,000 万股。前四条代表需求，第五条代表供给。他在 46 天小账户课里说，这些门槛都来自自己十年的交易统计；最佳画像更严：涨 30% 以上、$5—$10、流通股 1,000 万以下、7:00—10:00。',s:['wl','tx']},
+{id:'rvol',zh:'相对成交量',en:'Relative Volume',cat:'select',p:['relative volume','相对成交量'],d:'当日成交量与过去平均成交量之比：今天成交量是平时的 5 倍，相对成交量就是 5。他要求至少 5 倍；按他的统计，相对成交量低于 5 倍的股票贡献的利润明显更少，他也把“做了低相对成交量的股票”列为小账户挑战中的错误之一。',s:['wl','tx']},
+{id:'float',zh:'流通股',en:'Float',cat:'select',p:['low float','float','流通股'],d:'可供交易的股份数量，是“供给”。他偏好 2,000 万股以下，最好 1,000 万以下：需求相同时，流通股越少，价格动得越快。他也提醒，流通股很高的股票更容易借券做空，上涨时卖压来得更快。',s:['wl','gap','tx']},
+{id:'catalyst',zh:'新闻催化',en:'Breaking News / Catalyst',cat:'select',p:['breaking news','catalyst','新闻催化','催化'],d:'股票异动的明确原因，如公告、临床结果、合并。他说“我是波动交易者，找波动就是找突发新闻”。2026 年夏天出现了很多无新闻上涨的外国小盘股，他在冷市里最信任的催化是样本足够的正面临床结果，以及生物科技公司的大额私募配售。',s:['wl','tx']},
+{id:'leading-gainer',zh:'领涨股',en:'Leading Gainer',cat:'select',p:['leading gainer','领涨股'],d:'当天涨幅榜第一名。他说“别复杂化，专注最明显的那只”，通常只交易前两三名；领涨股只涨三四十个百分点、又都是便宜股的日子，他视为冷市信号。',s:['wl','tx']},
+{id:'scanner',zh:'扫描器',en:'Stock Scanner',cat:'select',p:['scanner','扫描器'],d:'实时扫描全市场、找出正在上涨股票的工具。他说这是自己从 2017 年开始开发的软件，每天早上先看 Top Gainer 扫描和前一晚的盘后领涨扫描。',s:['guide','tx']},
+{id:'watch-list',zh:'观察清单',en:'Watch List',cat:'select',p:['watch list','观察清单'],d:'周末他通常发布“周一观察清单”视频：从盘后领涨扫描开始，逐只检查流通股、价格、相对成交量、国别、新闻、日线阻力与增发风险。',s:['wl','tx']},
+{id:'gap-and-go',zh:'跳空高开策略',en:'Gap and Go',cat:'setup',p:['gap and go','跳空高开'],d:'专门用于开盘前后的策略：找跳空高开幅度大的股票，确认催化剂后按动能形态入场。他的统计显示，几乎全部利润来自当天跳空 2% 以上的股票。',s:['gap','tx']},
+{id:'micro-pullback',zh:'微回调',en:'Micro Pullback',cat:'setup',p:['micro pullback','微回调'],d:'强势上涨中幅度很小、持续很短的回调，在恢复上涨时入场。他在 10 秒图或 1 分钟图上找这种入场点，是他常说的“看家本领”之一。',s:['site','tx']},
+{id:'first-pullback',zh:'第一次回调',en:'First Pullback',cat:'setup',p:['first pullback','first candle to make a new high','第一次回调','第一根创新高的 K 线','创新高的 K 线'],d:'他最喜欢的形态：有新闻的股票急涨后第一次回调，守住后“第一根创新高的 K 线”越过前一根红 K 时买入，止损放在回调低点，目标是重测当日高点。拉升中途追入则止损太远，“像买彩票”。',s:['mom','tx']},
+{id:'bull-flag',zh:'牛旗',en:'Bull Flag',cat:'setup',p:['bull flag','牛旗'],d:'急涨后小幅回调整理：回撤不超过涨幅的 50%，价格保持在 VWAP、9 EMA、20 均线之上；在第一根突破前一根红 K 高点的绿 K 处买入，止损放在那根红 K 低点。一路跌回 VWAP 再反弹的走势不是牛旗。',s:['mom','tx']},
+{id:'ihs',zh:'反头肩',en:'Inverted Head & Shoulders',cat:'setup',p:['inverted head and shoulders','反头肩'],d:'下跌、反弹、再探低（头）、再反弹到同一水平，突破颈线后上涨。他在不少复盘里用它找第二段、第三段入场点，常与收复 VWAP 一起出现。',s:['tx']},
+{id:'vwap',zh:'VWAP',en:'Volume Weighted Average Price',cat:'setup',p:['VWAP'],d:'成交量加权平均价，日内多空的分水岭。他常在价格收复 VWAP 时找入场，跌回 VWAP 之下则视为转弱。',s:['tx']},
+{id:'macd',zh:'MACD',en:'MACD',cat:'setup',p:['MACD'],d:'显示趋势变化的振荡指标。他说如果只做一件事——MACD 为负时不做多——就能避开很多假突破；他复盘发现自己近期亏损的回升交易多发生在 MACD 为负时。',s:['guide','tx']},
+{id:'level2',zh:'Level 2 盘口',en:'Level 2 Data',cat:'setup',p:['level 2'],d:'显示各价位挂单的深度数据，他称之为“前方的路”。大卖单、隐藏卖家（成交不断价格却不动）都是他的离场信号；盘口买卖都很厚的股票则很难走出快速行情。',s:['tx']},
+{id:'topping-tail',zh:'长上影线',en:'Topping Tail',cat:'setup',p:['topping tail','candle wick','上影线','长上影线'],d:'K 线冲高后被卖回，留下长长的上影。他说一只股票一旦出现这种走势就可能反复出现，最好避开；它也是他的出场信号之一。与之相对，底部的长下影线（锤子线）偏多。',s:['tx']},
+{id:'hanging-man',zh:'吊人线',en:'Hanging Man',cat:'setup',p:['hanging man','吊人线','锤子线'],d:'长下影线、小实体的 K 线：出现在下跌底部叫锤子线（在“敲出底部”），出现在上涨之后叫吊人线，多半预示回落；收阴更弱。',s:['tx']},
+{id:'ta',zh:'技术分析',en:'Technical Analysis',cat:'setup',p:['technical analysis','pattern recognition','技术分析','形态识别'],d:'他认为短期内价格会因恐惧和贪婪严重脱离基本面，所以活跃交易者靠技术分析；成功的交易就是形态识别，即使只有 65%—70% 的准确率也足够。',s:['guide','tx']},
+{id:'false-breakout',zh:'假突破 / 坐过山车',en:'False Breakout / Round Trip',cat:'setup',p:['false breakout','round trip','假突破','坐过山车','跌回原点'],d:'Round trip：涨上去又回到起点；他说的假突破：第一根创新高的 K 线刚突破前高就被一波卖单砸回，收成放量流星线。冷市里假突破特别多，上涨缩量、回落放量是预警。',s:['tx']},
+{id:'quality-setup',zh:'A 级形态',en:'A Quality Setups',cat:'risk',p:['A quality setups','quality setups','A 级形态','低质量形态','B、C 级形态'],d:'他说只做 A 级形态时胜率约 75%—80%，A、B 混做约 70%，一旦开始做 C、D 级的“垃圾”形态，胜率会跌到约 46%。',s:['tx']},
+{id:'risk-reward',zh:'盈亏比',en:'Profit / Loss Ratio',cat:'risk',p:['risk vs reward','profit loss ratio','盈亏比','风险大于回报'],d:'用 $2 风险去赚 $1，胜率要达到 67% 才能保本；1:1 时 50% 保本。他职业生涯超过 35,000 笔交易，胜率长期约 70%、盈亏比约 1:1。他通常只能吃到预期空间的一半，所以空间太小的形态不值得做。',s:['guide','mom','tx']},
+{id:'max-loss',zh:'最大亏损',en:'Max Loss',cat:'risk',p:['max loss','最大亏损','止损'],d:'两种用法：单笔交易入场前定好的止损位置（通常是回调低点）；以及单日亏损上限——视频标题里的 “Max Loss” 指亏损触及他预设上限的交易日。他的原则是一天亏的钱不超过一个好日子能赚的。',s:['mom','tx']},
+{id:'red-day',zh:'红日 / 绿日',en:'Red Day / Green Day',cat:'risk',p:['red day','green day','红日','绿日'],d:'美股习惯：红色代表下跌或亏损，绿色代表上涨或盈利——与 A 股配色相反。他强调连续红日要越亏越少，并称“亏 $5,000 就收手”的日子为“成功的红日”。',s:['tx']},
+{id:'size',zh:'仓位 / 股数',en:'Share Size',cat:'risk',p:['share size','size up','股数','仓位','加仓'],d:'热市里流动性好，可以放大股数；冷市成交量萎缩，大股数会让滑点吃掉盈利、放大亏损。他反复承认自己的最大弱点是冷市里“松不开油门”，并用限制最大股数或从账户转出资金来约束自己。',s:['mom','tx']},
+{id:'slippage',zh:'滑点',en:'Slippage',cat:'risk',p:['slippage','滑点'],d:'按下买卖键的价格与实际成交价之差。赢的交易因此少赚、亏的交易因此多亏；股数越大、市场越冷，滑点越严重。他估计某个 −$3 万的日子若用四分之一股数，只会亏约 $5,000。',s:['tx']},
+{id:'drawdown',zh:'回撤',en:'Drawdown',cat:'risk',p:['drawdown','回撤'],d:'账户从高点下滑的幅度。他说回撤只有两种来源：市场变了（外部），或者自己失去状态（内部）；最糟的是两者同时发生。',s:['tx']},
+{id:'walk-away',zh:'收工 / 离场',en:'Walk Away',cat:'risk',p:['walk away','step away','收工','停手','收手'],d:'他列出的收工信号：回吐一半利润、触及最大亏损、最佳时段结束、没有 A 级形态、市场偏弱；停手后也不要再用手机盯盘，以免 FOMO 驱使他回场。',s:['tx']},
+{id:'fomo',zh:'FOMO 错失恐惧',en:'FOMO',cat:'risk',p:['FOMO'],d:'怕错过行情而冲动追入。他说“忍住 FOMO 的痛，远小于屈服于 FOMO 之后本可避免的亏损”；错过两次后的“补偿性”入场，是他最常见的亏损来源之一。',s:['tx']},
+{id:'metrics',zh:'交易统计',en:'Trading Metrics',cat:'risk',p:['metrics','交易统计','统计'],d:'他用交易统计软件按胜率、平均盈亏、星期、时段、价格、成交量、相对成交量逐项复盘：比如发现 8 月周五亏得最多、上午 10 点以后持续亏损，于是收紧对应时段的风险。',s:['mom','tx']},
+{id:'simulator',zh:'模拟盘',en:'Simulator',cat:'risk',p:['simulator','模拟盘'],d:'他每条视频都会说：先在模拟盘证明能稳定盈利，再用真钱交易。账户里有钱不等于能做大交易，第一步是建立交易记录和自信。',s:['bio','tx']},
+{id:'small-account',zh:'小账户挑战',en:'Small Account Challenge',cat:'market',p:['small account','小账户'],d:'2017 年他以 $583.15 起步，44 天超过 $100,000（使用约 6 倍杠杆的离岸券商）；2026 年 6 月他用嘉信理财现金账户从 $2,000 起步，46 天做到 $105,951.28，113 笔交易、胜率约 70%。挑战盈利全部捐给儿童医院。',s:['bio','tx']},
+{id:'hot-cold',zh:'热市 / 冷市',en:'Hot vs Cold Market',cat:'market',p:['hot market','cold market','热市','冷市','偏冷'],d:'他的冷市日目标 $5,000、热市 $20,000。冷市里假突破多、成交量少，他会减少股数或空仓；由热转冷往往是逐渐的，由冷转热则常由一只意外逼空的股票点燃。',s:['tx']},
+{id:'halt',zh:'停牌带宽',en:'LULD Halts',cat:'market',p:['halt','停牌'],d:'股价 5 分钟内波动超过带宽就会停牌 5 分钟。带宽按前一日收盘价计算：低于 $0.75 约 15%，$0.75—$3 为 20%，$3 以上 10%。停牌中无法买卖，他最大的单笔亏损 $24 万就发生在连续停牌中；盘前没有停牌带宽。',s:['tx']},
+{id:'offering',zh:'增发 / Shelf',en:'Offering / Shelf Registration',cat:'market',p:['secondary offering','offering','shelf registration','增发','shelf'],d:'公司在股价高位卖出新股筹资，会增加流通股、压低股价。他入场前会查 SEC 文件：近期是否提交增发登记（shelf）、承销商是谁、账上现金能撑几个季度；私募配售则通常被视为利好。',s:['tx']},
+{id:'short-squeeze',zh:'轧空',en:'Short Squeeze',cat:'market',p:['short squeeze','轧空','逼空'],d:'股价上涨迫使空头买回平仓，进一步推高价格。他用 Ortex 看空头比例、借券费率与融券使用率；他本人专注做多，等待空头被困时的大行情。',s:['wl','noshort','tx']},
+{id:'easy-borrow',zh:'易借券',en:'Easy to Borrow',cat:'market',p:['easy to borrow','易借券'],d:'券商把股票列为“易借券”时做空不用付借券费，空头会更积极，每次冲高都撞上卖压。他把它视为给涨幅加了一道“护栏”，除非空头被困。',s:['tx']},
+{id:'naked-short',zh:'裸卖空 / 幻影股',en:'Naked Short Selling',cat:'market',p:['naked short selling','phantom shares','naked short','裸卖空','幻影股','做空'],d:'裸卖空指未借入股票就卖出。他认为多家券商共用同一份开盘可借库存，可借出的股数可能是流通股的好几倍，正在压制小盘股——这是他的个人观点，本站未作核实。',s:['tx']},
+{id:'warrant',zh:'认股权证',en:'Warrants',cat:'market',p:['warrant','认股权证'],d:'以约定价格在未来买入股票的权利，像小盘股的期权。他一般不交易，因为流动性差，直接交易正股更容易进出。',s:['tx']},
+{id:'hotkeys',zh:'热键',en:'Hotkeys',cat:'market',p:['hotkeys','hotkey','热键'],d:'一键下单的快捷键。他用限价单并在卖价上加 10—15 美分；对 $1 左右的股票，这个偏移可能超过 10%，会被券商自动拒单。',s:['tx']},
+{id:'pdt',zh:'PDT 规则',en:'Pattern Day Trader Rule',cat:'market',p:['PDT'],d:'保证金账户 5 个交易日内日内交易超过 3 次，账户须保持至少 $25,000。他早年一次亏损让账户跌破 $25,000，被迫停下复盘，由此发现自己最赚钱的是 $2—$10 的快速动能股。',s:['guide','bio']},
+];
+</script>
+<script>
+__APPJS__
+</script></body></html>

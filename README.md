@@ -1,10 +1,24 @@
-# Ross Cameron 盘后复盘档案
+# 神奇交易员 · 交易员资料汇编
 
-打开 `index.html` 即可使用（`frames/` 和 `audio/` 目录需放在它旁边）。页面是静态 HTML，CSS、JavaScript、摘要和字幕都内嵌在页面里，截图放在 `frames/`，中文配音放在 `audio/`，不需要 API 密钥或网络字体，离线也能用。部署时服务器要支持 HTTP Range 请求（nginx、Caddy、GitHub Pages、Cloudflare Pages 等都默认支持），否则配音不能拖动进度；Python 自带的 `http.server` 不支持。
+传奇交易员的中文资料档案系列。每位交易员一份档案，资料都标出处，并区分本人自述和可查证的记录。全部是静态 HTML，样式和脚本内嵌，不依赖网络字体或 API，离线也能打开。
+
+```
+index.html              系列首页：交易员卡片、并排对比、编辑原则
+ross-cameron/           Ross Cameron 盘后复盘档案（视频型：字幕、截图、中文配音）
+  index.html  frames/  audio/
+bnf/index.html          B・N・F 资料汇编（文字型）
+seykota/index.html      Ed Seykota 资料汇编（文字型）
+livermore/index.html    Jesse Livermore 资料汇编（文字型）
+tools/feed/             Ross Cameron 页面的生成器
+tools/series/           首页和文字档案页的生成器
+scripts/build.mjs       Cloudflare 部署用：把公开页面复制到 dist/
+```
+
+部署时把整个目录放到静态服务器上，服务器要支持 HTTP Range 请求（nginx、Caddy、GitHub Pages、Cloudflare Pages 等都默认支持），否则 Ross Cameron 页的配音不能拖动进度。Python 自带的 `http.server` 不支持 Range。旧版只有 Ross Cameron 一页，首页会把 `#v/视频ID`、`#archive` 这类旧锚点自动转到 `ross-cameron/`。
 
 ## Cloudflare 部署
 
-本项目是纯静态站点，无需服务器或 API 密钥。部署产物统一放在 `dist/`，只包含 `index.html`、`frames/`、`audio/` 和 `.nojekyll`。
+本项目是纯静态站点，无需服务器或 API 密钥。部署产物统一放在 `dist/`，只包含首页 `index.html`、各交易员目录（`ross-cameron/`、`bnf/`、`seykota/`、`livermore/`）和 `.nojekyll`，不含 `tools/`。
 
 ### Workers（当前 GitHub 自动部署）
 
@@ -27,6 +41,35 @@ Pages 的 Git 集成负责发布构建输出，不需要填写 `wrangler deploy`
 不要把仓库根目录 `.` 设为静态资源上传目录：它会把 `.git` 历史、工具及依赖一并纳入上传。Cloudflare 单个静态资源最大为 25 MiB；构建脚本会在上传前检查大小，超限时报告实际资源路径。无需删除 Git 历史或拆分现有音频。
 
 参考：[Workers 静态资源配置](https://developers.cloudflare.com/workers/static-assets/binding/)、[Wrangler 自定义构建](https://developers.cloudflare.com/workers/wrangler/custom-builds/)、[Pages 静态 HTML 部署](https://developers.cloudflare.com/pages/framework-guides/deploy-anything/)。
+
+## 新增一位交易员
+
+文字型档案（像 B・N・F 这样以采访、报道和公开文件为主）：
+
+1. 复制 `tools/series/traders/_template.py` 为 `traders/<slug>.py`，按注释填写。正文里用 `[[s:来源ID]]` 标出处，用 `[[t:词条ID|文字]]` 标词条。
+2. 在 `tools/series/series.py` 的 `TRADERS` 里追加一项（`kind='profile'`），填首页卡片和对比表用的字段。
+3. 运行 `cd tools/series && python3 build.py`，生成 `<slug>/index.html` 并刷新首页和所有页面的系列导航。引用了不存在的来源，或者来源列表里有从未被引用的条目，构建会直接报错。
+4. 在 `scripts/build.mjs` 的发布目录列表里加上 `<slug>`，否则 Cloudflare 部署不会包含新页面。
+
+有自己生成器的页面（像 Ross Cameron 的视频档案）在 `TRADERS` 里用 `kind='archive'` 登记，首页和导航会收录它。改了 `TRADERS` 以后，两个生成器都要重跑，因为 Ross 页的侧栏导航也来自这份名单。
+
+## B・N・F 资料汇编
+
+`bnf/index.html`：日本个人投资者 B・N・F（“J-Com 男”）。页面包括档案卡、一页看懂、2000—2008 自述资产曲线（对数刻度，可以悬停查看出处，附数据表）、生平时间线、交易方法（25 日线乖离率逆张、板块联动、止损等，每条都附原话和出处）、J-Com 误下单事件拆解、语录、说法辨析和日股用语，共 30 条资料来源。
+
+来源分三类：“原文”是本站直接读到的报道，“转引”是只读到爱好者网站对杂志原文的摘录，“二次”是维基百科或第三方研究。日文原话只收录能对上原文的几条，其余只给中文大意。资料核查日期为 2026-10-02。数据在 `tools/series/traders/bnf.py`。
+
+## Ed Seykota 资料汇编
+
+`seykota/index.html`：美国趋势跟踪交易员艾德·塞柯塔。主要依据Market Wizards（1989）中的塞柯塔访谈全文、seykota.com（TSP 均线系统、交易部落流程 TTP、Whipsaw Song）和 1993 年塞柯塔与 Druz 合写的风险热度论文。英文原话保留在对应条目里。公开的账户数据只有一组、两个数据点，所以这页不画资产曲线。数据在 `tools/series/traders/seykota.py`。
+
+## Jesse Livermore 资料汇编
+
+`livermore/index.html`：杰西·利弗莫尔。主要依据他本人的《How to Trade in Stocks》（1940）、《股票作手回忆录》（Gutenberg #60979，叙述者是虚构人物 Larry Livingston，引用时一律标“小说”），以及 TIME 1934 年《Fourth Down》和 1940 年《Boy Plunger》两篇报道。TIME 1940 的说法和“1929 年做空赚 1 亿美元”的流传版本不符，页面在说法辨析里放在第一条。数据在 `tools/series/traders/livermore.py`。
+
+# Ross Cameron 盘后复盘档案
+
+页面位于 `ross-cameron/index.html`，`frames/` 和 `audio/` 两个目录要放在它旁边。
 
 ## 内容
 
@@ -58,9 +101,9 @@ Pages 的 Git 集成负责发布构建输出，不需要填写 `wrangler deploy`
 - `summaries.py`：长视频的摘要、要点、章节、代码和盈亏（`S`），以及短片摘要（`SH`）。
 - `template.html`、`app.js`：页面骨架、样式和交互，`TERMS` 词典在 `template.html` 里。
 - `index.v1.html`：交易账本部分的来源（只取标记和数据，不用它的样式）。
-- `fetch_frames.py`：下载截图并压缩到 `../../frames/`。
+- `fetch_frames.py`：下载截图并压缩到 `../../ross-cameron/frames/`。
 - `tx.py`：把字幕按时间点分段打印出来，写摘要时用。
-- `tts.py`：生成中文配音（需要联网）。每段译文单独合成，缓存在 `tts_cache/`，再按期拼成 `../../audio/<id>.mp3`；每段在音频中的起点记在 `tts.json`。改了译文后重新运行，只会重新合成改动的段落。`build.py` 会检查配音是否和当前译文一致，不一致的那期页面上改用浏览器朗读。
+- `tts.py`：生成中文配音（需要联网）。每段译文单独合成，缓存在 `tts_cache/`，再按期拼成 `../../ross-cameron/audio/<id>.mp3`；每段在音频中的起点记在 `tts.json`。改了译文后重新运行，只会重新合成改动的段落。`build.py` 会检查配音是否和当前译文一致，不一致的那期页面上改用浏览器朗读。
 
 新增一期的步骤：
 
@@ -73,5 +116,5 @@ Pages 的 Git 集成负责发布构建输出，不需要填写 `wrangler deploy`
 cd tools/feed
 python3 fetch_frames.py   # 只下载缺少的截图
 python3 tts.py            # 只合成缺少或改过的配音
-python3 build.py          # 输出到 ../../index.html
+python3 build.py          # 输出到 ../../ross-cameron/index.html
 ```

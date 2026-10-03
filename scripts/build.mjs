@@ -28,7 +28,7 @@ async function collect(relativePath) {
 }
 
 // Explicit public inputs keep Git history, dependencies and tooling out of uploads.
-for (const input of ['index.html', 'frames', 'audio', '.nojekyll']) {
+for (const input of ['index.html', 'ross-cameron', 'bnf', 'seykota', 'livermore', '.nojekyll']) {
   await collect(input);
 }
 

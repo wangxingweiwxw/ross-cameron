@@ -5,3 +5,5 @@
 .env.*
 .dev.vars
 .dev.vars.*
+__pycache__/
+/tools/feed/tts_cache/

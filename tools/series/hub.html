@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>__SITE__ · 交易员资料汇编</title>
+<meta name="description" content="神奇交易员系列：把传奇交易员散落在视频、采访、帖子和公开文件里的资料，逐条整理成可查出处的中文档案。目前收录 __NAMES__。">
+<meta name="color-scheme" content="dark">
+<link rel="icon" type="image/svg+xml" href="__ICON__">
+<script>
+// 旧链接兼容：本站原先只有 Ross Cameron 一页，#v/视频ID、#archive 等锚点转到它的新位置
+(function(){var h=location.hash;if(h&&!/^#(traders|compare|about)$/.test(h))location.replace('ross-cameron/'+h);})();
+</script>
+<style>
+__BASECSS__
+.wrap{max-width:1180px;margin:0 auto;padding:0 clamp(18px,3.4vw,48px) 40px}
+.top{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:20px 0;border-bottom:1px solid var(--line)}
+.brand{display:flex;align-items:center;gap:12px;color:var(--text);text-decoration:none}.brand i{width:34px;height:34px;border-radius:8px;display:grid;place-items:center;background:var(--text);color:var(--bg);font:normal 700 15px var(--sans)}.brand b{display:block;font-size:16px;line-height:1.2}.brand small{display:block;font:11px var(--mono);letter-spacing:.12em;color:var(--mute)}
+.top nav{display:flex;gap:4px}.top nav a{color:var(--dim);text-decoration:none;font-size:14px;padding:6px 10px;border-radius:7px}.top nav a:hover{background:var(--panel);color:var(--text)}
+.hero{padding:64px 0 36px;max-width:860px}.hero .kick{font:12px var(--mono);letter-spacing:.16em;color:var(--mute);margin:0 0 18px}
+.hero h1{margin:0 0 22px;font-size:clamp(44px,7vw,92px);line-height:1;letter-spacing:-.02em;font-weight:800}
+.hero p{margin:0;color:var(--dim);font-size:17.5px;line-height:1.95}.hero p b{color:var(--text);font-weight:600}
+section{padding-top:48px}.shead{display:flex;justify-content:space-between;align-items:flex-end;gap:16px;flex-wrap:wrap;border-bottom:1px solid var(--line);padding-bottom:14px;margin-bottom:20px}
+.shead h2{margin:0;font-size:clamp(22px,2.4vw,30px)}.shead h2 small{display:block;font:12px var(--mono);letter-spacing:.14em;color:var(--mute);margin-bottom:6px;font-weight:400}.shead p{margin:0;font-size:14px;color:var(--mute);max-width:520px}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:18px}
+.tcard{position:relative;display:flex;flex-direction:column;gap:12px;background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:22px 22px 20px;color:inherit;text-decoration:none;transition:border-color .15s,transform .15s;overflow:hidden}
+.tcard:before{content:"";position:absolute;left:0;top:0;right:0;height:3px;background:var(--ac)}
+a.tcard:hover{border-color:var(--ac);transform:translateY(-2px)}a.tcard:hover .tc-go{color:var(--text)}
+.tc-top{display:flex;justify-content:space-between;align-items:center;gap:10px}.tc-top i{width:44px;height:44px;border-radius:10px;display:grid;place-items:center;background:var(--ac);color:#0e1114;font:normal 700 13px var(--mono)}
+.tc-flag{font:12px var(--mono);color:var(--mute)}
+.tcard h3{margin:0;font-size:26px;line-height:1.25;letter-spacing:-.01em}.tcard h3 small{font-size:15px;color:var(--mute);font-weight:400;margin-left:10px}
+.tc-line{margin:0;font-size:15px;line-height:1.85;color:var(--dim)}
+.tcard dl{margin:0;display:grid;gap:4px}.tcard dl div{display:grid;grid-template-columns:44px minmax(0,1fr);gap:10px;font-size:13.5px}.tcard dt{color:var(--mute)}.tcard dd{margin:0}
+.tc-stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border:1px solid var(--line);border-radius:8px;background:var(--bg2)}.tc-stats div{padding:10px 12px;border-left:1px solid var(--line);min-width:0}.tc-stats div:first-child{border-left:0}
+.tc-stats b{display:block;font:600 16px/1.35 var(--sans);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.tc-stats small{font-size:11.5px;color:var(--mute);line-height:1.4;display:block}
+.tc-media{display:flex;flex-wrap:wrap;gap:6px}.tc-media span{font-size:12px;color:var(--dim);border:1px solid var(--line2);border-radius:999px;padding:1px 9px}
+.tc-go{margin-top:auto;font-size:14px;color:var(--ac);font-weight:600}
+.tcard.soon{border-style:dashed;background:transparent}.tcard.soon:before{display:none}.tcard.soon .tc-top i{background:var(--panel2);color:var(--mute);font-size:20px}.tcard.soon h3{font-size:20px;color:var(--dim)}
+.cmp{overflow:auto;border:1px solid var(--line);border-radius:var(--r)}
+table{border-collapse:collapse;width:100%;min-width:560px;font-size:14.5px}th,td{text-align:left;padding:12px 16px;border-bottom:1px solid var(--line);vertical-align:top;line-height:1.7}
+thead th{background:var(--panel2);font-size:15px}thead th a{color:var(--text);text-decoration:none}thead th a:hover{color:var(--cyan)}tbody th{color:var(--mute);font-weight:500;font-size:13px;white-space:nowrap;width:96px;background:var(--panel)}tbody td{color:var(--dim);background:var(--panel)}tbody tr:last-child>*{border-bottom:0}
+.principles{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}.pr{background:var(--panel);border:1px solid var(--line);border-radius:var(--r);padding:18px 20px}.pr b{display:block;font-size:16px;margin-bottom:6px}.pr p{margin:0;font-size:14.5px;line-height:1.85;color:var(--dim)}.pr i{font:normal 12px var(--mono);color:var(--mute);display:block;margin-bottom:8px}
+@media(max-width:860px){.principles{grid-template-columns:1fr}}
+@media(max-width:720px){.wrap{padding:0 16px 32px}.top nav{display:none}.hero{padding:40px 0 20px}.hero p{font-size:15.5px}.cards{grid-template-columns:1fr}.tc-stats{grid-template-columns:1fr 1fr 1fr}}
+</style></head><body>
+<div class="wrap">
+<header class="top"><a class="brand" href="./"><i>神</i><span><b>__SITE__</b><small>__SITE_EN__</small></span></a><nav aria-label="首页目录"><a href="#traders">交易员</a><a href="#compare">对比</a><a href="#about">编辑原则</a></nav></header>
+<main>
+<div class="hero"><p class="kick">__SITE_EN__ · 中文资料汇编</p><h1>__SITE__</h1>
+<p>传奇交易员的资料散落在视频、杂志采访、论坛帖子和公开文件里，真假混杂、二手转述多。本系列为每位交易员建一份中文档案：<b>他做什么市场、怎么交易、数字从哪里来、哪些说法经不起核对</b>。每条资料都标出处，并区分本人自述和可查证的记录。</p></div>
+
+<section id="traders"><div class="shead"><h2><small>01 · TRADERS</small>交易员档案</h2><p>目前收录 __N__ 位。卡片上的数字口径以档案页内说明为准。</p></div>
+<div class="cards">__CARDS__</div></section>
+
+<section id="compare"><div class="shead"><h2><small>02 · SIDE BY SIDE</small>并排对比</h2><p>同一套维度看不同市场、不同年代的交易员。</p></div>
+<div class="cmp"><table><thead><tr><th scope="col"><span class="mono" style="font-size:12px;color:var(--mute);font-weight:400">维度</span></th>__CMPHEAD__</tr></thead><tbody>__CMPBODY__</tbody></table></div></section>
+
+<section id="about"><div class="shead"><h2><small>03 · EDITORIAL</small>编辑原则</h2></div>
+<div class="principles">
+<div class="pr"><i>01</i><b>每条都有出处</b><p>正文的数字和说法都带角标，可以跳到资料来源；只读到二手整理的，标为“转引”。</p></div>
+<div class="pr"><i>02</i><b>区分自述与记录</b><p>交易员在视频或采访里报的盈亏、资产，与会计师报告、监管申报、法院判决分开呈现，并注明口径。</p></div>
+<div class="pr"><i>03</i><b>不神化，也不复制</b><p>收录流传的说法时逐条辨析。高收益来自特定市场和时机，档案不构成投资建议。</p></div>
+</div></section>
+</main>
+<footer><p>__SITE__ · 独立的中文资料整理，与所收录的交易员及其公司均无关联。引用的视频、报道和文件版权归原作者所有。所有内容仅供学习参考，不构成投资建议；交易有风险，多数短线交易者亏损。</p><a href="#traders">返回交易员 ↑</a></footer>
+</div>
+</body></html>
